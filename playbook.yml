@@ -1,6 +1,6 @@
 ---
 - name: Install docker
-- hosts: localhost
+  hosts: localhost
   become: true
 
   tasks:
