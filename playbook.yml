@@ -13,7 +13,7 @@
         dest: ~/
 
     - name: Install Docker package using .deb file
-      command: dpkg -i ~/docker.io_19.03.8-0ubuntu1_amd64.deb
+      command: yes | dpkg -i ~/docker.io_19.03.8-0ubuntu1_amd64.deb
 
     - name: start docker service
       command: systemctl start docker
