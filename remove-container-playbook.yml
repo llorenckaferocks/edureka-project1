@@ -1,0 +1,8 @@
+---
+- name: Deploy Container docker
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: Remove Container
+      command: sudo docker rm --force edureka-project1-application
