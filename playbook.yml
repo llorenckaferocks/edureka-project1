@@ -7,8 +7,13 @@
     - name: update apt
       command: apt update
 
-    - name: install docker engine
-      command: apt install -y docker.io
+    - name: get previous docker package
+      get_url:
+        url: "https://launchpadlibrarian.net/468715393/docker.io_19.03.8-0ubuntu1_amd64.deb"
+        dest: ~/
+
+    - name: Install Docker package using .deb file
+      command: dpkg -i ~/docker.io_19.03.8-0ubuntu1_amd64.deb
 
     - name: start docker service
       command: systemctl start docker
