@@ -10,10 +10,10 @@
     - name: get previous docker package
       get_url:
         url: "https://launchpadlibrarian.net/468715393/docker.io_19.03.8-0ubuntu1_amd64.deb"
-        dest: ~/
+        dest: /root/
 
     - name: Install Docker package using .deb file
-      command: yes | dpkg -i ~/docker.io_19.03.8-0ubuntu1_amd64.deb
+      command: yes | dpkg -i /root/docker.io_19.03.8-0ubuntu1_amd64.deb
 
     - name: restart docker service
       command: systemctl restart docker
