@@ -55,11 +55,6 @@ node{
                     sh "${dockerCMD} push llorenckaferocks/edureka-project1:${tagName}"
                 }
 
-                echo "Removing Old Container..."
-                node ('SlaveNode') {
-                    ansiblePlaybook disableHostKeyChecking: true, colorized: false, installation: 'Ansible', inventory: '', playbook: 'remove-container-playbook.yml', sudoUser: null
-                }
-
                 echo "Deploying Container..."
                 node ('SlaveNode') {
                     ansiblePlaybook disableHostKeyChecking: true, colorized: false, installation: 'Ansible', inventory: '', playbook: 'deploy-container-playbook.yml', sudoUser: null
