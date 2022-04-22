@@ -1,5 +1,5 @@
 ---
-- name: Deploy Container docker
+- name: Remove Container docker
   hosts: localhost
   become: true
 
