@@ -5,4 +5,4 @@
 
   tasks:
     - name: deploy application
-      command: sudo docker run --name edureka-project1-application -itd -p 8095:80 llorenckaferocks/edureka-project1:1.0
+      command: docker run --name edureka-project1-application -itd -p 8095:80 llorenckaferocks/edureka-project1:1.0
