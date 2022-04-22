@@ -1,6 +1,5 @@
 node{
 
-
         def docker
         def dockerCMD
         def tagName = "1.0"
