@@ -7,13 +7,13 @@
     - name: get previous docker package
       get_url:
         url: "https://launchpadlibrarian.net/468715393/docker.io_19.03.8-0ubuntu1_amd64.deb"
-        dest: /root/
+        dest: ~/
 
     - name: stop docker service
       command: systemctl stop docker
 
     - name: Install Docker package using .deb file
-      command: yes | dpkg -i /root/docker.io_19.03.8-0ubuntu1_amd64.deb
+      command: dpkg -i ~/docker.io_19.03.8-0ubuntu1_amd64.deb
 
     - name: start docker service
       command: systemctl start docker
