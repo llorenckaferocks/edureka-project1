@@ -4,5 +4,8 @@
   become: true
 
   tasks:
+    - name: Stop Container
+      command: true || docker stop edureka-project1-application
+
     - name: Remove Container
       command: true || docker rm --force edureka-project1-application
