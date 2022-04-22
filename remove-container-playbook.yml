@@ -5,4 +5,4 @@
 
   tasks:
     - name: Remove Container
-      command: docker rm --force edureka-project1-application || true
+      command: true || docker rm --force edureka-project1-application
