@@ -10,6 +10,18 @@ node{
              dockerCMD = "$docker/docker"
         }
 
+        stage('git checkout'){
+            try{
+                echo "checking out code from git repository ..."
+                git 'https://github.com/llorenckaferocks/edureka-project1'
+            }
+            catch(Exception e){
+                echo "Exception occurred which git checkout"
+                currentBuild.result="FAILURE"
+                throw e
+            }
+        }
+
         stage ('P1 - Job1 - Install and Configure Puppet - Build'){
             try{
                 echo "Installing Puppet Agent..."
@@ -76,4 +88,3 @@ node{
             }
         }
 }
-
